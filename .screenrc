@@ -1,0 +1,34 @@
+# encoding stuff
+setenv LC_CTYPE en_US.UTF-8
+setenv INSIDE_SCREEN true
+defutf8 on
+
+term screen-256color
+termcapinfo xterm* ti@:te@
+
+# some obvious things
+autodetach            on
+hardcopy_append       on
+startup_message       off
+vbell                 off
+nethack               on
+defscrollback         10000
+multiuser             on
+
+hardstatus alwayslastline
+hardstatus string '%{= kW}%?%-Lw%?%{r}(%{W}%n*%f%t%? %u%?%{r})%{w}%?%+Lw%?%= '
+shelltitle "▸ |bash"
+
+activity "%c activity -> %n%f %t"
+bell "%c bell -> %n%f %t^G"
+vbell_msg " *beep* "
+
+term screen-256color
+
+# # open some terminals by default
+screen -t home  9
+screen -t editor 0
+screen -t irb  1
+screen -t repo 2
+screen -t server 3
+screen -t tests 4

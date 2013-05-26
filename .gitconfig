@@ -1,0 +1,24 @@
+[user]
+  name = PoTe
+  email = poteland@gmail.com
+
+[color]
+  diff = auto
+  status = auto
+  branch = auto
+
+[alias]
+  st = status
+  co = checkout
+  nb = checkout -b
+  up = pull --rebase
+  br = branch
+  serve = !git daemon --reuseaddr --verbose --base-path=. --export-all ./.git
+  commiters = !git log --pretty=short --no-merges | git shortlog -nes
+
+[core]
+  editor = vim
+  pager = "less -RiqMSj5"
+  autocrlf = false
+[branch]
+	autosetuprebase = always
