@@ -94,6 +94,7 @@ augroup MyAutoCommands
   autocmd BufRead,BufNewFile *.haml                               setfiletype haml
   autocmd BufRead,BufNewFile *.sass,*.scss                        setfiletype sass
   autocmd BufRead,BufNewFile config.ru,Gemfile,Isolate,Thorfile   setfiletype ruby
+  autocmd BufRead,BufNewFile *.py                                 setfiletype python
   autocmd BufRead,BufNewFile *.liquid,*.mustache                  setfiletype liquid
   autocmd BufRead,BufNewFile *.go                                 setfiletype go
 
@@ -121,15 +122,14 @@ augroup MyAutoCommands
   " Some Linux distributions set filetype in /etc/vimrc.
   " Clear filetype flags before changing runtimepath to force Vim
   " to reload them.
-  autocmd FileType go  set shiftwidth=2 softtabstop=2 noexpandtab
-  "autocmd FileType go filetype off
-  autocmd FileType go filetype plugin indent off
+  autocmd FileType go  set shiftwidth=2 softtabstop=2 expandtab
   autocmd FileType go set runtimepath+=$GOROOT/misc/vim
   autocmd FileType go filetype plugin indent on
+  " autocmd FileType go filetype plugin indent off
   autocmd FileType go syntax on
 
   " Other langs
-  autocmd FileType python,php  set shiftwidth=4 softtabstop=4 expandtab
+  autocmd FileType python,php  set shiftwidth=4 tabstop=4 softtabstop=4 expandtab
 
   " Vim files
   autocmd FileType     vim     set shiftwidth=2 softtabstop=2 expandtab
@@ -141,4 +141,5 @@ augroup END
 
 " show tabs as blank-padded arrows, trailing spaces as middle-dots
 set list
-set listchars=tab:→\ ,trail:·
+set listchars=trail:·
+" set listchars=tab:→\ ,trail:·
