@@ -18,4 +18,4 @@
   autocrlf = false
 
 [branch]
-  autosetuprebase = always
+  #autosetuprebase = always

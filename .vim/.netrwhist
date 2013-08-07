@@ -1,7 +1,3 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =5
-let g:netrw_dirhist_1='/Users/pote/code/matrix/repos/code'
-let g:netrw_dirhist_2='/Users/pote/code/matrix/repos/code/deploy'
-let g:netrw_dirhist_3='/Users/pote/code/matrix/repos/code/deploy/init-scripts'
-let g:netrw_dirhist_4='/Users/pote/code/matrix/repos/code/deploy'
-let g:netrw_dirhist_5='/Users/pote/code/matrix/repos/code/go/agents/vc-agent-007'
+let g:netrw_dirhist_cnt =1
+let g:netrw_dirhist_1='/Users/pote/code/Work/VividCortex/agents/vc-agent-007'

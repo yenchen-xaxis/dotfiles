@@ -25,7 +25,7 @@ export RBXOPT="-X19 rbx -v"
 export GOROOT=/usr/local/go
 export PATH=$PATH:$GOROOT/bin
 export GOBIN=$GOROOT/bin
-export GOPATH=~/code/go
+export GOPATH=~/go
 
 # Use vim to browse man pages. One can use Ctrl-[ and Ctrl-t
 # to browse and return from referenced man pages. ZZ or q to quit.
@@ -69,21 +69,23 @@ alias screen='screen -U'
 alias retag='ctags --extra=+f -R .'
 alias flushdns='dscacheutil -flushcache'
 alias tmuxA='tmux attach-session -t Work'
-alias rroutes='be rake routes | grep'
 alias grope='grep -Rni --color'
-alias shotgun='shotgun -s puma || shotgun'
 alias foca='t whois'
-alias CAPLOY='cap deploy'
+alias jdeps="bash <(curl -s https://raw.github.com/VividCortex/johnny-deps/v0.1.3/bin/johnny_deps)"
 
 # Git
 alias gs='git status'
 alias gl='git log'
+
+# Ruby
+alias shotgun='shotgun -s puma || shotgun'
 
 # Rails 3
 alias rg='script/rails generate'
 alias rs='script/rails server --debugger'
 alias rc='script/rails console'
 alias rd='script/rails dbconsole'
+alias rroutes='be rake routes | grep'
 
 # Bundler
 alias be='bundle exec'
