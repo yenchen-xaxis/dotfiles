@@ -1,3 +1,8 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =1
-let g:netrw_dirhist_1='/Users/pote/code/Work/VividCortex/agents/vc-agent-007'
+let g:netrw_dirhist_cnt =6
+let g:netrw_dirhist_1='/Users/pote/Dropbox/blogs/pretty_blog/source/blog/archives'
+let g:netrw_dirhist_2='/Users/pote/Dropbox/blogs/pretty_blog/source/blog'
+let g:netrw_dirhist_3='/Users/pote/Dropbox/blogs/pretty_blog/source/blog/archives'
+let g:netrw_dirhist_4='/Users/pote/Dropbox/blogs/pretty_blog/source/blog'
+let g:netrw_dirhist_5='/Users/pote/Dropbox/blogs/pretty_blog/source/blog/categories'
+let g:netrw_dirhist_6='/Volumes/Secrecy/VividCortex/api-client'

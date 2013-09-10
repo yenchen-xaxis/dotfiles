@@ -22,10 +22,10 @@ export RUBYOPT="rubygems Ilib Itest Ispec"
 export RBXOPT="-X19 rbx -v"
 
 # Go
-export GOROOT=/usr/local/go
+export GOROOT=/Volumes/Secrecy/go
 export PATH=$PATH:$GOROOT/bin
 export GOBIN=$GOROOT/bin
-export GOPATH=~/go
+export GOPATH=/Volumes/Secrecy/gopath
 
 # Use vim to browse man pages. One can use Ctrl-[ and Ctrl-t
 # to browse and return from referenced man pages. ZZ or q to quit.
@@ -71,7 +71,7 @@ alias flushdns='dscacheutil -flushcache'
 alias tmuxA='tmux attach-session -t Work'
 alias grope='grep -Rni --color'
 alias foca='t whois'
-alias jdeps="bash <(curl -s https://raw.github.com/VividCortex/johnny-deps/v0.1.3/bin/johnny_deps)"
+alias gpm="bash <(curl -s https://raw.github.com/pote/gpm/master/gpm)"
 
 # Git
 alias gs='git status'
