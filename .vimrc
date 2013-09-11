@@ -4,6 +4,8 @@ set background=light
 let g:solarized_termcolors=256
 colorscheme solarized
 
+source ~/.vim/plugin/to-github.vim
+
 filetype indent on
 
 set nocompatible
