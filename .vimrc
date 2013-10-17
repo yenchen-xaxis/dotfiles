@@ -5,6 +5,7 @@ let g:solarized_termcolors=256
 colorscheme solarized
 
 source ~/.vim/plugin/to-github.vim
+source ~/.vim/plugin/gist.vim
 
 filetype indent on
 

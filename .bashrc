@@ -14,6 +14,7 @@ export TERM=xterm-256color
 
 # Ignore from history repeat commands, and some other unimportant ones
 export HISTIGNORE="&:[bf]g:c:exit"
+export HISTCONTROL="ignoreboth"
 
 # Ruby development made easier
 export RUBYOPT="rubygems Ilib Itest Ispec"
@@ -178,6 +179,7 @@ run_features() {
 
 
 ## rbenv
+export RBENV_ROOT=/usr/local/var/rbenv
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
 ################################################################################
