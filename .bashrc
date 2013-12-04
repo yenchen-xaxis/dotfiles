@@ -73,6 +73,7 @@ alias tmuxA='tmux attach-session -t Work'
 alias grope='grep -Rni --color'
 alias foca='t whois'
 alias gpm="bash <(curl -s https://raw.github.com/pote/gpm/master/gpm)"
+alias pandora="ssh root@poteland.com -D 2001"
 
 # Git
 alias gs='git status'
