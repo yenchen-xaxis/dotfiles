@@ -178,6 +178,24 @@ run_features() {
   fi
 }
 
+__gem_ps1 () {
+  source=$PWD
+  target=$GEM_HOME
+
+  if ([ -n "$GEM_HOME" ]); then
+    common_part=$source
+    back=
+    while [ "${target#$common_part}" = "${target}" ]; do
+      common_part=$(dirname $common_part)
+      back="../${back}"
+    done
+
+    echo "(gem: ${back}${target#$common_part/})"
+  else
+    echo ""
+  fi
+}
+
 
 ## rbenv
 export RBENV_ROOT=/usr/local/var/rbenv
@@ -193,7 +211,7 @@ if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 #   <hostname> <full path to pwd> (git: <git branch>)
 #   ▸
 export PS1='\[\033[01;32m\]\h \[\033[01;33m\]\w$(__git_ps1 " \[\033[01;36m\]\
-  (git: %s)")\[\033[01;37m\]\n▸\[\033[00m\] '
+  (git: %s)") $(__gem_ps1) \[\033[01;37m\]\n▸\[\033[00m\] '
 
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
