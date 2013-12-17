@@ -190,7 +190,7 @@ __gem_ps1 () {
       back="../${back}"
     done
 
-    echo "(gem: ${back}${target#$common_part/})"
+    echo "(gemset: ${back}${target#$common_part/})"
   else
     echo ""
   fi
