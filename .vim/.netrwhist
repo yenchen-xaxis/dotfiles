@@ -1,6 +1,11 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =4
-let g:netrw_dirhist_1='/Users/pote/code/OpenSource/planet.rb'
-let g:netrw_dirhist_2='/Users/pote/code/OpenSource/planet.rb/lib'
-let g:netrw_dirhist_3='/Users/pote/code/Personal/pathfinder'
-let g:netrw_dirhist_4='/Users/pote/code/Personal/pathfinder/lib'
+let g:netrw_dirhist_cnt =9
+let g:netrw_dirhist_1='/Users/pote/code/Work/Tarmac/Health-Care-Cost-Calculator/app/controllers'
+let g:netrw_dirhist_2='/Users/pote/code/Work/Tarmac/Health-Care-Cost-Calculator/app/controllers/admin'
+let g:netrw_dirhist_3='/Users/pote/code/Work/Tarmac/Health-Care-Cost-Calculator/app/models'
+let g:netrw_dirhist_4='/Users/pote/code/Work/Tarmac/Health-Care-Cost-Calculator/app/models/report'
+let g:netrw_dirhist_5='/Users/pote/code/Work/Tarmac/Health-Care-Cost-Calculator/app/controllers/admin'
+let g:netrw_dirhist_6='/Users/pote/code/Work/Tarmac/Health-Care-Cost-Calculator/app/controllers'
+let g:netrw_dirhist_7='/Users/pote/Documents/Pulpotaurs/source'
+let g:netrw_dirhist_8='/Users/pote/Documents/Pulpotaurs'
+let g:netrw_dirhist_9='/Users/pote/Documents/Pulpotaurs/source'

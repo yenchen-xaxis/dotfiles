@@ -150,6 +150,9 @@ set list
 set listchars=tab:\ \ ,trail:·
 " set listchars=tab:·,trail:·
 
+"" Vim Markdown Preview
+let g:VMPhtmlreader = 'links'
+
 " Pathogen
 execute pathogen#infect()
 syntax on
