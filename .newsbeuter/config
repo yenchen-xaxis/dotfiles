@@ -1,0 +1,4 @@
+browser  open
+download-path ~/Podcasts
+player   mplayer
+save-path ~/Documents/FeedArticles
