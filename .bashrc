@@ -23,10 +23,8 @@ export RUBYOPT="rubygems Ilib Itest Ispec"
 export RBXOPT="-X19 rbx -v"
 
 # Go
-export GOROOT=/Volumes/Secrecy/go
-export PATH=$PATH:$GOROOT/bin
-export GOBIN=$GOROOT/bin
-export GOPATH=/Volumes/Secrecy/gopath
+export GOPATH=~/go
+export PATH=$PATH:/usr/local/Cellar/go/1.2/libexec/bin
 
 # Use vim to browse man pages. One can use Ctrl-[ and Ctrl-t
 # to browse and return from referenced man pages. ZZ or q to quit.
@@ -72,8 +70,7 @@ alias flushdns='dscacheutil -flushcache'
 alias tmuxA='tmux attach-session -t Work'
 alias grope='grep -Rni --color'
 alias foca='t whois'
-alias gpm="bash <(curl -s https://raw.github.com/pote/gpm/master/gpm)"
-alias pandora="ssh root@poteland.com -D 2001"
+alias pandora="ssh root@link.poteland.com -D 2001"
 
 # Git
 alias gs='git status'
@@ -178,28 +175,21 @@ run_features() {
   fi
 }
 
-__gem_ps1 () {
-  source=$PWD
-  target=$GEM_HOME
+__gst_ps1 () {
+  ([ -n "$GS_NAME" ] && echo "💎 ") || echo ""
+}
 
-  if ([ -n "$GEM_HOME" ]); then
-    common_part=$source
-    back=
-    while [ "${target#$common_part}" = "${target}" ]; do
-      common_part=$(dirname $common_part)
-      back="../${back}"
-    done
-
-    echo "(gemset: ${back}${target#$common_part/})"
-  else
-    echo ""
-  fi
+__gvp_ps1 () {
+  ([ -n "$GVP_NAME" ] && echo "📦 ") || echo ""
 }
 
 
 ## rbenv
 export RBENV_ROOT=/usr/local/var/rbenv
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
+
+# OPAM configuration
+. /Users/pote/.opam/opam-init/init.sh > /dev/null 2> /dev/null || true
 
 ################################################################################
 #                                                                              #
@@ -211,7 +201,16 @@ if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 #   <hostname> <full path to pwd> (git: <git branch>)
 #   ▸
 export PS1='\[\033[01;32m\]\h \[\033[01;33m\]\w$(__git_ps1 " \[\033[01;36m\]\
-  (git: %s)") $(__gem_ps1) \[\033[01;37m\]\n▸\[\033[00m\] '
+  (git: %s)") $(__gst_ps1) $(__gvp_ps1) \[\033[01;37m\]\n▸\[\033[00m\] '
 
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
+
+## Adds gst path
+export PATH="/Users/pote/code/gst/bin:$PATH"
+
+
+# BEGIN Ruboto setup
+source ~/.rubotorc
+# END Ruboto setup
+
