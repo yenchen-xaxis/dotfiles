@@ -184,10 +184,6 @@ __gvp_ps1 () {
 }
 
 
-## rbenv
-export RBENV_ROOT=/usr/local/var/rbenv
-if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
-
 # OPAM configuration
 . /Users/pote/.opam/opam-init/init.sh > /dev/null 2> /dev/null || true
 
