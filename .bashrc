@@ -19,11 +19,13 @@ export HISTCONTROL="ignoreboth"
 # Ruby development made easier
 export RUBYOPT="rubygems Ilib Itest Ispec"
 
+# Native extensions compile flags
+export ARCHFLAGS=-Wno-error=unused-command-line-argument-hard-error-in-future
+
 # Rubinius on 1.9.3
 export RBXOPT="-X19 rbx -v"
 
 # Go
-export GOPATH=~/go
 export PATH=$PATH:/usr/local/Cellar/go/1.2/libexec/bin
 
 # Use vim to browse man pages. One can use Ctrl-[ and Ctrl-t
@@ -204,9 +206,3 @@ export PATH="/usr/local/heroku/bin:$PATH"
 
 ## Adds gst path
 export PATH="/Users/pote/code/gst/bin:$PATH"
-
-
-# BEGIN Ruboto setup
-source ~/.rubotorc
-# END Ruboto setup
-
