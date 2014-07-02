@@ -100,89 +100,12 @@ alias coffee='/usr/local/share/npm/bin/coffee'
 #                                                                              #
 ################################################################################
 
-# cd into matching gem directory
-cdgem() {
-  local gempath=$(gem env gemdir)/gems
-  if [[ $1 == "" ]]; then
-    cd $gempath
-    return
-  fi
-
-  local gem=$(ls $gempath | g $1 | sort | tail -1)
-  if [[ $gem != "" ]]; then
-    cd $gempath/$gem
-  fi
-}
-_cdgem() {
-  COMPREPLY=($(compgen -W '$(ls `gem env gemdir`/gems)' -- ${COMP_WORDS[COMP_CWORD]}))
-  return 0;
-}
-complete -o default -o nospace -F _cdgem cdgem;
-
-# Encode the string into "%xx"
-urlencode() {
-  ruby -e 'puts ARGV[0].split(/%/).map{|c|"%c"%c.to_i(16)} * ""' "$1"
-}
-
-# Decode a urlencoded string ("%xx")
-urldecode() {
-  ruby -r cgi -e 'puts CGI.unescape ARGV[0]' "$1"
-}
-
-# open mvim for ack search results
-ackvim(){
-  local pattern=$1; shift
-  ack -l --print0 "$pattern" "$@" | xargs -0o mvim -o +/"$pattern"
-}
-
-# reverse find
-rfind() {
-  local target="$1" cwd="$PWD"
-
-  [[ "$target" ]] || { echo "ERROR: missing target" >&2; return 1; }
-
-  while [[ "$cwd" ]]; do
-    if [[ -e "$cwd"/"$target" ]]; then
-      echo "$cwd"/"$target"
-      return 0
-    fi
-    cwd="${cwd%/*}"
-  done
-  return 1
-}; export -f rfind
-
-# find cucumber features and step definitions
-features () {
-  local pattern=$1; shift
-  egrep -Ir "$pattern" features/ --include '*.feature' "$@"
-}; export -f features
-
-steps () {
-  local pattern=$1; shift
-  egrep -Ir "$pattern" features/step_definitions/ "$@"
-}; export -f steps
-
-run_features() {
-  local pattern=$1; shift
-
-  local features=()
-  while IFS= read -r -d '' feature; do
-    features+=("$feature")
-  done < <(features "$pattern" -lZ)
-
-  if ((${#features[@]})); then
-    cucumber "$@" -- "${features[@]}"
-  else
-    echo 'no matches' >&2; return 1
-  fi
-}
-
 __gst_ps1 () {
-  ([ -n "$GS_NAME" ] && echo "💎 ") || echo ""
+  ([ -n "$GEM_HOME" ] && echo "💎 ") || echo ""
 }
 
 __gvp_ps1 () {
-  ([ -n "$GVP_NAME" ] && echo "📦 ") || echo ""
+  ([ -n "$GOPATH" ] && echo "📦 ") || echo ""
 }
 
 
@@ -206,3 +129,5 @@ export PATH="/usr/local/heroku/bin:$PATH"
 
 ## Adds gst path
 export PATH="/Users/pote/code/gst/bin:$PATH"
+
+export PATH="/System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/bin:$PATH"

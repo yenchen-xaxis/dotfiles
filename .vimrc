@@ -99,7 +99,6 @@ augroup MyAutoCommands
   autocmd BufRead,BufNewFile config.ru,Gemfile,Isolate,Thorfile   setfiletype ruby
   autocmd BufRead,BufNewFile *.py                                 setfiletype python
   autocmd BufRead,BufNewFile *.liquid,*.mustache                  setfiletype liquid
-  autocmd BufRead,BufNewFile *.go                                 setfiletype go
 
   " Ruby files
   autocmd FileType cucumber         set sw=2 ts=2 sts=2 et
@@ -120,19 +119,6 @@ augroup MyAutoCommands
 
   " CSS
   autocmd FileType sass,css    set shiftwidth=2 softtabstop=2 expandtab
-
-  " Go
-  " Some Linux distributions set filetype in /etc/vimrc.
-  " Clear filetype flags before changing runtimepath to force Vim
-  " to reload them.
-  autocmd filetype off
-  autocmd FileType go filetype plugin indent off
-  autocmd FileType go  set shiftwidth=2 softtabstop=2 noexpandtab
-  autocmd FileType go set runtimepath+=$GOROOT/misc/vim
-  autocmd FileType go filetype plugin indent on
-  autocmd FileType go syntax on
-  " autocmd FileType go filetype plugin indent off
-  au BufWritePost *.go !gofmt -w %
 
   " Other langs
   autocmd FileType python,php  set shiftwidth=4 tabstop=4 softtabstop=4 expandtab

@@ -16,8 +16,10 @@
   editor = vim
   pager = "less -RiqMSj5"
   autocrlf = false
+	excludesfile = /Users/pote/.gitignore
 
 [branch]
   autosetuprebase = always
+
 [branch "master"]
 	rebase = true
