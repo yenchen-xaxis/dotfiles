@@ -141,3 +141,6 @@ let g:VMPhtmlreader = 'links'
 execute pathogen#infect()
 syntax on
 filetype plugin indent on
+
+" vim-go
+let g:go_disable_autoinstall = 1
