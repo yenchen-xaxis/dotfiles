@@ -144,3 +144,4 @@ filetype plugin indent on
 
 " vim-go
 let g:go_disable_autoinstall = 1
+let g:go_fmt_autosave = 1

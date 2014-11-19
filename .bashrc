@@ -28,6 +28,9 @@ export RBXOPT="-X19 rbx -v"
 # Go
 export PATH=$PATH:/usr/local/Cellar/go/1.2/libexec/bin
 
+# Haskell
+export PATH="$HOME/Library/Haskell/bin:$PATH"
+
 # Use vim to browse man pages. One can use Ctrl-[ and Ctrl-t
 # to browse and return from referenced man pages. ZZ or q to quit.
 # NOTE: initially within vim, one can goto the man page for the
@@ -83,7 +86,7 @@ alias shotgun='shotgun -s puma || shotgun'
 
 # Rails 3
 alias rg='script/rails generate'
-alias rs='script/rails server --debugger'
+alias rs='script/rails server'
 alias rc='script/rails console'
 alias rd='script/rails dbconsole'
 alias rroutes='be rake routes | grep'
