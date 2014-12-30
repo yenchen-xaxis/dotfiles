@@ -132,5 +132,3 @@ export PATH="/usr/local/heroku/bin:$PATH"
 
 ## Adds gst path
 export PATH="/Users/pote/code/gst/bin:$PATH"
-
-export PATH="/System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/bin:$PATH"
