@@ -16,7 +16,7 @@
   editor = vim
   pager = "less -RiqMSj5"
   autocrlf = false
-	excludesfile = /Users/pote/.gitignore
+	excludesfile = ~/.gitignore
 
 [branch]
   autosetuprebase = always

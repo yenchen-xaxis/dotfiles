@@ -16,17 +16,11 @@ export TERM=xterm-256color
 export HISTIGNORE="&:[bf]g:c:exit"
 export HISTCONTROL="ignoreboth"
 
-# Ruby development made easier
-export RUBYOPT="rubygems Ilib Itest Ispec"
-
-# Native extensions compile flags
-export ARCHFLAGS=-Wno-error=unused-command-line-argument-hard-error-in-future
-
-# Rubinius on 1.9.3
-export RBXOPT="-X19 rbx -v"
-
-# Go
-export PATH=$PATH:/usr/local/Cellar/go/1.2/libexec/bin
+# chruby
+source /usr/local/share/chruby/chruby.sh
+# Default version
+chruby ruby-2.1.2
+export GEM_HOME=''
 
 # Haskell
 export PATH="$HOME/Library/Haskell/bin:$PATH"
@@ -65,24 +59,13 @@ fi
 ################################################################################
 
 # General
-alias ll='ls -la'
-alias ls='ls -G'
-alias c='clear'
-alias ..='cd ..'
-alias screen='screen -U'
-alias retag='ctags --extra=+f -R .'
-alias flushdns='dscacheutil -flushcache'
-alias tmuxA='tmux attach-session -t Work'
+alias=ti='tmuxify'
+alias ts='tmux ls'
+alias ta='tmux attach -t '
 alias grope='grep -Rni --color'
-alias foca='t whois'
-alias pandora="ssh root@link.poteland.com -D 2001"
 
 # Git
 alias gs='git status'
-alias gl='git log'
-
-# Ruby
-alias shotgun='shotgun -s puma || shotgun'
 
 # Rails 3
 alias rg='script/rails generate'
@@ -94,8 +77,6 @@ alias rroutes='be rake routes | grep'
 # Bundler
 alias be='bundle exec'
 
-# Coffeescript
-alias coffee='/usr/local/share/npm/bin/coffee'
 
 ################################################################################
 #                                                                              #

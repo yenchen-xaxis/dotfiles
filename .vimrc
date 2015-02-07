@@ -74,13 +74,6 @@ nmap <silent> <Leader>n :set number!<CR>
 nmap <Leader>i :set ignorecase!<CR>:set ignorecase?<CR>
 nmap <Leader>w :set wrap!<CR>:set wrap?<CR>
 
-" switch between splits through f7 and f8
-map <f8> <c-w>j<c-w>_
-imap <f8> <esc><f8>
-
-map <f7> <c-w>k<c-w>_
-imap <f7> <esc><f7>
-
 " use system registry by default
 set clipboard=unnamed
 
@@ -99,21 +92,14 @@ augroup MyAutoCommands
   autocmd BufRead,BufNewFile *.liquid,*.mustache                  setfiletype liquid
 
   " Ruby files
-  autocmd FileType cucumber         set sw=2 ts=2 sts=2 et
   autocmd FileType ruby,eruby,      set sw=2 ts=2 sts=2 et
   autocmd FileType ruby,eruby,      imap <buffer> <CR> <C-R>=RubyEndToken()<CR>
-
-  autocmd FileType ruby             nnoremap <Leader>d orequire "debugger"; debugger; ""<Esc>
-  autocmd FileType ruby             nnoremap <Leader>D Orequire "debugger"; debugger; ""<Esc>
 
   " HTML/HAML
   autocmd FileType html,haml   set shiftwidth=2 softtabstop=2 expandtab
 
-  autocmd FileType haml        nnoremap <Leader>d o- require "ruby-debug"; debugger; ""<Esc>
-  autocmd FileType haml        nnoremap <Leader>D O- require "ruby-debug"; debugger; ""<Esc>
-
   " Javascript
-  autocmd FileType javascript  set shiftwidth=2 softtabstop=2 expandtab
+  autocmd FileType javascript  set shiftwidth=4 softtabstop=4 expandtab
 
   " CSS
   autocmd FileType sass,css    set shiftwidth=2 softtabstop=2 expandtab
@@ -133,9 +119,6 @@ augroup END
 set list
 set listchars=tab:\ \ ,trail:·
 " set listchars=tab:·,trail:·
-
-"" Vim Markdown Preview
-let g:VMPhtmlreader = 'links'
 
 " Pathogen
 execute pathogen#infect()
