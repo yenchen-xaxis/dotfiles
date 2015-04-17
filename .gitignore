@@ -1,0 +1,5 @@
+*.swp
+.gs
+.tmuxify.layout
+.env
+.vim/swap

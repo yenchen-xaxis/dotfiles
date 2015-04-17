@@ -1,0 +1,25 @@
+[user]
+  name = pote
+  email = pote@tardis.com.uy
+
+[color]
+  diff = auto
+  status = auto
+  branch = auto
+
+[alias]
+  co = checkout
+  serve = !git daemon --reuseaddr --verbose --base-path=. --export-all ./.git
+  commiters = !git log --pretty=short --no-merges | git shortlog -nes
+
+[core]
+  editor = vim
+  pager = "less -RiqMSj5"
+  autocrlf = false
+	excludesfile = ~/.gitignore
+
+[branch]
+  autosetuprebase = always
+
+[branch "master"]
+	rebase = true
