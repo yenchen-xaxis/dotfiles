@@ -23,6 +23,9 @@ if ((${BASH_VERSINFO[0]} >= 4)) && ! shopt globstar >/dev/null; then
   shopt -s globstar # recursive globs fuck yes!
 fi
 
+
+source /etc/bash_completion
+
 ################################################################################
 #                                                                              #
 #                                    Aliases                                   #
