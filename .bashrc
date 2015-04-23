@@ -64,7 +64,7 @@ __gvp_ps1 () {
 #   <hostname> <full path to pwd> (git: <git branch>)
 #   ▸
 export PS1='\[\033[01;32m\]\h \[\033[01;33m\]\w$(__git_ps1 " \[\033[01;36m\]\
-  (git: %s)") $(__gst_ps1) $(__gvp_ps1) \[\033[01;37m\]\n▸\[\033[00m\] '
+  (git: %s)") $(__gst_ps1) $(__gvp_ps1) \[\033[01;37m\]\n$\[\033[00m\] '
 
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
