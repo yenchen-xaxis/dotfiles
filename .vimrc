@@ -98,6 +98,9 @@ augroup MyAutoCommands
   " HTML/HAML
   autocmd FileType html,haml   set shiftwidth=2 softtabstop=2 expandtab
 
+  " OCaml
+  autocmd FileType ml         set shiftwidth=2 softtabstop=2 expandtab
+
   " Javascript
   autocmd FileType javascript  set shiftwidth=4 softtabstop=4 expandtab
 
@@ -128,3 +131,7 @@ filetype plugin indent on
 " vim-go
 let g:go_disable_autoinstall = 1
 let g:go_fmt_autosave = 1
+
+" OCaml/merlin
+let g:opamshare = substitute(system('opam config var share'),'\n$','','''')
+execute "set rtp+=" . g:opamshare . "/merlin/vim"

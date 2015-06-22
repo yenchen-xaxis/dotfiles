@@ -1,6 +1,7 @@
 # vim: sts=2 sw=2 et
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 export PATH=/usr/local/sbin:$PATH
+export PATH=/Users/pote/code/go/bin:$PATH
 
 # We're using 64 bits, right?
 export ARCHFLAGS="-arch x86_64"
@@ -17,13 +18,18 @@ export HISTIGNORE="&:[bf]g:c:exit"
 export HISTCONTROL="ignoreboth"
 
 # chruby
-source /usr/local/share/chruby/chruby.sh
+#source /usr/local/share/chruby/chruby.sh
 # Default version
-chruby ruby-2.1.2
-export GEM_HOME=''
+#chruby ruby-2.2.2
+#export GEM_HOME=''
 
 # Haskell
 export PATH="$HOME/Library/Haskell/bin:$PATH"
+
+# Docker
+export DOCKER_CERT_PATH=/Users/pote/.boot2docker/certs/boot2docker-vm
+export DOCKER_TLS_VERIFY=1
+export DOCKER_HOST=tcp://192.168.59.103:2380
 
 # Use vim to browse man pages. One can use Ctrl-[ and Ctrl-t
 # to browse and return from referenced man pages. ZZ or q to quit.
@@ -58,11 +64,19 @@ fi
 #                                                                              #
 ################################################################################
 
-# General
-alias=ti='tmuxify'
+# Most important alias in the world.
+alias wh='echo "¯\_(ツ)_/¯" | pbcopy'
+
+# Tmux
+alias ti='tmuxify'
 alias ts='tmux ls'
 alias ta='tmux attach -t '
+
+
+# General
 alias grope='grep -Rni --color'
+alias rss='LANG=en_GB newsbeuter'
+alias fix_video='sudo killall VDCAssistant'
 
 # Git
 alias gs='git status'

@@ -3,3 +3,4 @@
 .tmuxify.layout
 .env
 .vim/swap
+.DS_Store
