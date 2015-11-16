@@ -114,6 +114,9 @@ augroup MyAutoCommands
   autocmd FileType     vim     set shiftwidth=2 softtabstop=2 expandtab
   autocmd BufWritePost .vimrc  source $MYVIMRC
 
+  " Go files
+  autocmd FileType go set noexpandtab
+
   " Auto-wrap text in all buffers
   autocmd BufRead,BufNewFile * set formatoptions+=t
 augroup END
