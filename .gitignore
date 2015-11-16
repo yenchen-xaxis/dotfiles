@@ -6,3 +6,4 @@
 .vim/swap
 .DS_Store
 nodes.conf
+.vim/.netrwhist
