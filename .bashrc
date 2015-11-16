@@ -1,7 +1,6 @@
 # vim: sts=2 sw=2 et
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 export PATH=/usr/local/sbin:$PATH
-export PATH=/Users/pote/code/go/bin:$PATH
 
 # We're using 64 bits, right?
 export ARCHFLAGS="-arch x86_64"
