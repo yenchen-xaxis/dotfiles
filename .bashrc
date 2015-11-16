@@ -65,12 +65,13 @@ fi
 
 # Most important alias in the world.
 alias wh='echo "¯\_(ツ)_/¯" | pbcopy'
+alias shame='say -v Victoria shame'
 
 # Tmux
 alias ti='tmuxify'
 alias ts='tmux ls'
 alias ta='tmux attach -t '
-
+alias tk='tmux kill-session -t'
 
 # General
 alias grope='grep -Rni --color'
@@ -126,3 +127,5 @@ export PATH="/usr/local/heroku/bin:$PATH"
 
 ## Adds gst path
 export PATH="/Users/pote/code/gst/bin:$PATH"
+
+
