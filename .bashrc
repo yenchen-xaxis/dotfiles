@@ -91,6 +91,8 @@ alias rroutes='be rake routes | grep'
 # Bundler
 alias be='bundle exec'
 
+alias vlc='~/Applications/VLC.app/Contents/MacOS/VLC "$@"'
+export VLC_PLUGIN_PATH=~/Applications/VLC.app/Contents/MacOS/plugins/
 
 ################################################################################
 #                                                                              #
