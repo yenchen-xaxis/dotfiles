@@ -2,5 +2,7 @@
 .gs
 .tmuxify.layout
 .env
+.env.pote
 .vim/swap
 .DS_Store
+nodes.conf
